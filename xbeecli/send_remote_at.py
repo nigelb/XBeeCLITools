@@ -72,9 +72,11 @@ def send_remote_at_command():
         radio.send("remote_at", command="WR", frame_id="\x14", dest_addr_long=address)
         packets["\x14"] = True
 
-
-if __name__ == "__main__":
+def send_remote_at():
     global packets
     send_remote_at_command()
     while len(packets) > 0:
         time.sleep(1)
+
+if __name__ == "__main__":
+    send_remote_at()

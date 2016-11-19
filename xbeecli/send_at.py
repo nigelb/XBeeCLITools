@@ -67,9 +67,11 @@ def send_at_command():
         radio.send("at", command="WR", frame_id="\x14")
         packets["\x14"] = True
 
-
-if __name__ == "__main__":
+def send_at():
     global packets
     send_at_command()
     while len(packets) > 0:
         time.sleep(1)
+
+if __name__ == "__main__":
+    send_at()

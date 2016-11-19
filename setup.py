@@ -29,8 +29,8 @@ setup(name='xbeecli',
       entry_points={
           "console_scripts": [
               "network_discover = xbeecli.network_discover:network_discover",
-              "send_remote_at = xbeecli.send_remote_at:send_remote_at_command",
-              "send_at = xbeecli.send_at:send_at_command",
+              "send_remote_at = xbeecli.send_remote_at:send_remote_at",
+              "send_at = xbeecli.send_at:send_at",
           ]
       },
 )
