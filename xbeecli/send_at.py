@@ -32,7 +32,7 @@ def encode_paramater(at_command, paramater):
     if at_command == "PL":
         return struct.pack("B", int(paramater))
 
-def send_remote_at_command():
+def send_at_command():
     global packets
     p = create_base_arg_parser()
     p.add_argument("at_command", type=str)
@@ -70,6 +70,6 @@ def send_remote_at_command():
 
 if __name__ == "__main__":
     global packets
-    send_remote_at_command()
+    send_at_command()
     while len(packets) > 0:
         time.sleep(1)
