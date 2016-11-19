@@ -49,7 +49,7 @@ def network_discover():
         if frame['frame_id'] == '\x03':
             if frame['parameter']['source_addr_long'] not in radios:
                 radios[frame['parameter']['source_addr_long']] = ""
-                print "Found Radio: %s"%" ".join([format(ord(x), "02x") for x in frame['parameter']['source_addr_long']])
+                print "Found Radio: %s"%":".join([format(ord(x), "02x") for x in frame['parameter']['source_addr_long']])
         # else:
         #     print frame
 

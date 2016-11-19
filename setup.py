@@ -28,7 +28,9 @@ setup(name='xbeecli',
       install_requires=["pyserial", "xbee"],
       entry_points={
           "console_scripts": [
-              "serial_grabber = xbeecli.network_discover:network_discover",
+              "network_discover = xbeecli.network_discover:network_discover",
+              "send_remote_at = xbeecli.send_remote_at:send_remote_at",
+              "send_at = xbeecli.send_at:send_at",
           ]
       },
 )
